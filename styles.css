@@ -394,6 +394,63 @@ footer {
   text-decoration: underline;
 }
 
+.talk-card__action {
+  margin: 0.95rem 0 0;
+}
+
+.talk-card[id] {
+  scroll-margin-top: 1.5rem;
+}
+
+.talk-card[id]:target {
+  border-color: var(--blue-700);
+  box-shadow: 0 0 0 4px var(--blue-100), 0 16px 34px rgba(29, 53, 95, 0.12);
+}
+
+.home-past-panel {
+  display: flex;
+  padding: clamp(1.3rem, 4vw, 1.8rem);
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #cdd9e9;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f7faff, #edf3fb);
+}
+
+.home-past-panel h2 {
+  margin: 0.15rem 0 0.35rem;
+}
+
+.home-past-panel p:last-child {
+  margin: 0;
+  color: var(--muted);
+}
+
+.button-link {
+  display: inline-flex;
+  min-height: 46px;
+  padding: 0.7rem 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--blue-900);
+  color: var(--white);
+  flex: 0 0 auto;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button-link:hover {
+  background: var(--blue-800);
+  color: var(--white);
+}
+
+.home-archive-section {
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--line);
+}
+
 .section-heading {
   display: flex;
   gap: 1.5rem;
@@ -715,7 +772,8 @@ footer {
   }
 
   .seminar-note,
-  .section-heading {
+  .section-heading,
+  .home-past-panel {
     align-items: flex-start;
     flex-direction: column;
   }
