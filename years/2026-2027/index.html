@@ -258,11 +258,15 @@
   </footer>
   <script>
     function openTargetedAbstract() {
-      if (!window.location.hash) return;
-      const talk = document.querySelector(window.location.hash);
-      const abstract = talk && talk.querySelector("details");
-      if (abstract) abstract.open = true;
-    }
+  const id = window.location.hash.slice(1);
+  if (!id) return;
+
+  const talk = document.getElementById(id);
+  if (!talk || !talk.classList.contains("talk-card")) return;
+
+  const abstract = talk.querySelector("details");
+  if (abstract) abstract.open = true;
+}
 
     openTargetedAbstract();
     window.addEventListener("hashchange", openTargetedAbstract);
