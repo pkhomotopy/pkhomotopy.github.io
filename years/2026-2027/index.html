@@ -55,7 +55,7 @@
         <p>Monday, November 16, 2026</p>
       </div>
 
-      <article class="talk-card talk-card--featured">
+      <article id="yingxin-li" class="talk-card talk-card--featured">
         <div class="talk-date" aria-hidden="true">
           <span class="talk-date__month">Nov</span>
           <span class="talk-date__day">16</span>
@@ -102,7 +102,7 @@
       </div>
 
       <div class="talk-list">
-        <article class="talk-card">
+        <article id="rin-ray" class="talk-card">
           <div class="talk-date" aria-hidden="true">
             <span class="talk-date__month">Nov</span>
             <span class="talk-date__day">30</span>
@@ -120,7 +120,7 @@
           </div>
         </article>
 
-        <article class="talk-card">
+        <article id="ben-knudsen" class="talk-card">
           <div class="talk-date" aria-hidden="true">
             <span class="talk-date__month">Dec</span>
             <span class="talk-date__day">15</span>
@@ -256,6 +256,17 @@
   <footer>
     &copy; 2026–2027 Siyuan Algebraic Topology Seminar
   </footer>
+  <script>
+    function openTargetedAbstract() {
+      if (!window.location.hash) return;
+      const talk = document.querySelector(window.location.hash);
+      const abstract = talk && talk.querySelector("details");
+      if (abstract) abstract.open = true;
+    }
+
+    openTargetedAbstract();
+    window.addEventListener("hashchange", openTargetedAbstract);
+  </script>
   <!-- Trigger GitHub Pages rebuild: 2026-11-06 -->
 </body>
 </html>
